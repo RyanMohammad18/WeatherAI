@@ -26,8 +26,8 @@ npm run dev
 Create a `.env` file in the root directory and add the following variables:
 
 ```env
-VITE_WEATHER_API_URL=https://api.weather-ai.co/v1
-VITE_WEATHER_API_KEY=your_api_key_here
+VITE_VITE_WEATHER_API_URL=https://api.weather-ai.co/v1
+VITE_VITE_WEATHER_API_KEY=your_api_key_here
 ```
 
 ### API Endpoint Used:

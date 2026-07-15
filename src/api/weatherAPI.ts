@@ -20,11 +20,11 @@ export async function getWeather(
   });
 
   const response = await fetch(
-    `${import.meta.env.VITE_WEATHER_API_URL}/weather?${query.toString()}`,
+    `${import.meta.env.VITE_VITE_WEATHER_API_URL}/weather?${query.toString()}`,
     {
       signal,
       headers: {
-        Authorization: `Bearer ${import.meta.env.VITE_WEATHER_API_KEY}`,
+        Authorization: `Bearer ${import.meta.env.VITE_VITE_WEATHER_API_KEY}`,
       },
     }
   );
