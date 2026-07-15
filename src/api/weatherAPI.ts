@@ -12,12 +12,12 @@ export async function getWeather(
 
 
   const response = await fetch(
-    `${import.meta.env.VITE_WEATHER_API_URL}/weather`,
+    `${import.meta.env.WEATHER_API_URL}/weather`,
     {
       signal,
       headers:{
         Authorization:
-        `Bearer ${import.meta.env.VITE_WEATHER_API_KEY}`
+        `Bearer ${import.meta.env.WEATHER_API_KEY}`
       }
     }
   );
