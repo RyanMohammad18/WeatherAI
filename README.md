@@ -1,75 +1,57 @@
-# React + TypeScript + Vite
+# Live Link : 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## Project Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. Clone the repository
 
-## React Compiler
+Clone this repository to your local machine.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Install dependencies
 
-## Expanding the ESLint configuration
+Run the following command:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+```bash
+npm run dev
+```
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Environment Variables
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Create a `.env` file in the root directory and add the following variables:
+
+```env
+VITE_WEATHER_API_URL=https://api.weather-ai.co/v1
+VITE_WEATHER_API_KEY=your_api_key_here
+```
+
+### API Endpoint Used:
 
 ```
+GET /v1/weather
+```
+
+Stack used:  **React**, **TypeScript**, **Vite**, and **TanStack Query**.
+
+### Key Implementations
+
+- Built using **reusable React components** with a focus on maintainability and scalability.
+- Followed **DRY (Don't Repeat Yourself)** principles to reduce code duplication.
+- Implemented **TanStack Query** for efficient server state management, caching, and API synchronization.
+- Added **request cancellation** using TanStack Query's built-in `signal` with AbortController.
+- Implemented **exponential backoff retry strategy** for handling temporary API failures.
+- Added proper **API error handling**, including authentication errors and rate limit handling.
+---
+
+## Future Improvements
+
+If I get more times I would:
+
+- Implement pagination with query params in the page
+- Add prefetching for proper data retrieve
+- More API implementation or graph to visualize and more
