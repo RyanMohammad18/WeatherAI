@@ -1,10 +1,8 @@
-# Weather AI Dashboard 🌤️
+# Weather AI Dashboard
 
 ---
 
-## 🚀 Project Setup
-
-Follow the steps below to run the project locally.
+## Project Setup
 
 ### 1. Clone the repository
 
@@ -18,14 +16,12 @@ Run the following command:
 npm install
 ```
 
-Run:
-
 ```bash
 npm run dev
 ```
 ---
 
-## 🔐 Environment Variables
+## Environment Variables
 
 Create a `.env` file in the root directory and add the following variables:
 
@@ -42,10 +38,6 @@ GET /v1/weather
 
 Stack used:  **React**, **TypeScript**, **Vite**, and **TanStack Query**.
 
-## Implementation
-
-The project follows a clean and scalable frontend architecture.
-
 ### Key Implementations
 
 - Built using **reusable React components** with a focus on maintainability and scalability.
@@ -56,7 +48,7 @@ The project follows a clean and scalable frontend architecture.
 - Added proper **API error handling**, including authentication errors and rate limit handling.
 ---
 
-## 📌 Future Improvements
+## Future Improvements
 
 If I get more times I would:
 
